@@ -12,6 +12,8 @@ fun main(){
 
     println("Harga Awal: $price")
 
+    val pesan = userNote ?: "Tidak ada catatan"
+    println("Catatan: $pesan")
 }
 
 fun calculateDiscount(price: Int): Int = if (price > 500000) price - (price * 0.2).roundToInt() else price - (price * 0.1).roundToInt()
