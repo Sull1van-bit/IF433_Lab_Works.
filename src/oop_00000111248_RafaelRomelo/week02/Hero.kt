@@ -1,6 +1,6 @@
 package oop_00000111248_RafaelRomelo.week02
 
-class Hero (val name: String, var hp: Int = 100, var baseDamage: Int) {
+class Hero (val name: String, var hp: Int = 100, val baseDamage: Int) {
 
     fun attack (targetName: String) {
         println("$name menebas $targetName !")

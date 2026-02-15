@@ -5,22 +5,49 @@ import java.util.Scanner
 fun main() {
     val scanner = Scanner(System.`in`)
 
-    print("Masukkan judul buku: ")
-    val bookTitle = scanner.nextLine()
+    val enemyName = "Bahlil"
+    var enemyHp = 100
 
-    print("Masukkan nama peminjam: ")
-    val borrower = scanner.nextLine()
+    print("Masukkan nama hero: ")
+    val name = scanner.nextLine()
 
-    print("Masukkan durasi peminjaman (dalam hari): ")
-    var loanDuration = scanner.nextInt()
+    print("Masukkan base damage hero: ")
+    val damage = scanner.nextInt()
 
-    if (loanDuration <= 0) {
-        println("Durasi peminjaman tidak boleh minus atau nol. Durasi diatur menjadi 1 hari.")
-        loanDuration = 1
+    val hero = Hero(name, 100, damage)
+
+    var action = 0
+
+    while (hero.isAlive() && enemyHp > 0) {
+        println("1. Attack 2. Kabur")
+        print("Pilih action: ")
+        action = scanner.nextInt()
+
+        when (action) {
+            1 -> {
+                hero.attack(enemyName)
+                enemyHp -= hero.baseDamage
+                if (enemyHp > 0) {
+                    println("$enemyName menerima ${hero.baseDamage} damage, sisa HP: $enemyHp")
+                    var enemyDamage = (10..20).random()
+                    println("$enemyName mengayunkan pohon sawit ke ${hero.name}!")
+                    hero.takeDamage(enemyDamage)
+                } else {
+                    println("$enemyName mati!")
+                }
+            }
+            2 -> {
+                println("${hero.name} kabur dari pertarungan!")
+                break
+            }
+            else -> println("Action tidak valid!")
+        }
     }
 
-    val b1 = Loan(bookTitle, borrower, loanDuration)
-    println("Buku '${b1.bookTitle}' dipinjam oleh ${b1.borrower}")
-    println("Durasi peminjaman: ${b1.loanDuration} hari")
-    println("Denda yang harus dibayar: Rp${b1.calculateFine()}")
+    if (!hero.isAlive()) {
+        println("${hero.name} kalah dalam pertarungan!")
+    } else if (enemyHp <= 0) {
+        println("${hero.name} menang dalam pertarungan!")
+    }
+
 }
