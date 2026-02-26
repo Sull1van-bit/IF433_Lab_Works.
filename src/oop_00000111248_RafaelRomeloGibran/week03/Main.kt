@@ -10,4 +10,6 @@ fun main() {
     println("Nama Senjata: ${sword.name}")
     println("Final Damage: ${sword.damage}")
     println("Tier Senjata: ${sword.tier}")
+
+    // Task 2
 }
