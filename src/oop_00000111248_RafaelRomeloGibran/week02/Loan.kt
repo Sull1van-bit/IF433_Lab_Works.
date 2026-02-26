@@ -1,4 +1,4 @@
-package oop_00000111248_RafaelRomelo.week02
+package oop_00000111248_RafaelRomeloGibran.week02
 
 class Loan(val bookTitle: String, val borrower: String, val loanDuration: Int = 1) {
 

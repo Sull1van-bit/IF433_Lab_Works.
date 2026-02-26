@@ -1,4 +1,4 @@
-package oop_00000111248_RafaelRomelo.week02
+package oop_00000111248_RafaelRomeloGibran.week02
 
 import java.util.Scanner
 

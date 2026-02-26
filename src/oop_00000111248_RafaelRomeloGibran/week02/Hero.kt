@@ -1,4 +1,4 @@
-package oop_00000111248_RafaelRomelo.week02
+package oop_00000111248_RafaelRomeloGibran.week02
 
 class Hero (val name: String, var hp: Int = 100, val baseDamage: Int) {
 
