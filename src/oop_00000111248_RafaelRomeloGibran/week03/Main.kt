@@ -1,15 +1,13 @@
 package oop_00000111248_RafaelRomeloGibran.week03
 
 fun main() {
-    val e = Employee("Budi")
+    // Task 1
+    val sword = Weapon("Excalibur")
 
-    // 1. Test validasi salary
-    e.salary = 5000000
-    println("Gaji: ${e.salary}")
+    sword.damage = -50
+    sword.damage = 9999
 
-    // 2. Test encapsulation
-    e.increasePerformance()
-
-    // 3. Test computated property
-    println("Pajak yang harus dibayar: ${e.tax}")
+    println("Nama Senjata: ${sword.name}")
+    println("Final Damage: ${sword.damage}")
+    println("Tier Senjata: ${sword.tier}")
 }
