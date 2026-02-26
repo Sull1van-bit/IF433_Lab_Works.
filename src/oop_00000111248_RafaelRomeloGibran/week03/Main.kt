@@ -7,9 +7,16 @@ fun main() {
     sword.damage = -50
     sword.damage = 9999
 
-    println("Nama Senjata: ${sword.name}")
-    println("Final Damage: ${sword.damage}")
-    println("Tier Senjata: ${sword.tier}")
+    println("Nama senjata: ${sword.name}")
+    println("Damage: ${sword.damage}")
+    println("Tier: ${sword.tier}")
 
     // Task 2
+    val player = Player("Gogon")
+
+    player.addXp(50)
+    println("Level: ${player.level}")
+
+    player.addXp(60)
+    println("Level: ${player.level}")
 }
