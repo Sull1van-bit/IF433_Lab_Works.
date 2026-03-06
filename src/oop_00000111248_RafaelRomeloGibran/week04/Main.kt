@@ -21,4 +21,12 @@ fun main() {
     val employee = Employee("Rafael", 5000)
     employee.work()
     println("Bonus: ${employee.calculateBonus()}")
+
+    val manager = Manager("Gibran", 8000)
+    manager.work()
+    println("Bonus: ${manager.calculateBonus()}")
+
+    val developer = Developer("Andi", 6000, "Python")
+    developer.work()
+    println("Bonus: ${developer.calculateBonus()}")
 }
