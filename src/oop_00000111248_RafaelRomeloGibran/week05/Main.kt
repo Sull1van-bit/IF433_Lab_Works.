@@ -1,26 +1,8 @@
 package oop_00000111248_RafaelRomeloGibran.week05
 
 fun main() {
-    val dosen1 = Dosen("Pal Alex", "0123456")
-    val admin1 = Admin("Bu Siti")
-
-    val daftarPegawai: List<Pegawai> = listOf(dosen1, admin1)
-
-    println("==== AKTIVITAS PEGAWAI ====")
-    for (pegawai in daftarPegawai) {
-        pegawai.bekerja()
-
-        //pegawai.mengajar()
-
-        when (pegawai) {
-            is Dosen -> {
-                println("Terdeteksi sebagai dosen NIDN: ${pegawai.nidn}")
-                pegawai.mengajar()
-            }
-            is Admin -> {
-                println("Terdeteksi sebagai admin")
-                pegawai.doAdminWork()
-            }
-        }
-    }
+    val math1 = MathHelper()
+    println("Luas Persegi: ${math1.hitungLuas(5)}")
+    println("Luas Persegi Panjang: ${math1.hitungLuas(5, 3)}")
+    println("Luas Lingkaran: ${math1.hitungLuas(7.0)}")
 }
