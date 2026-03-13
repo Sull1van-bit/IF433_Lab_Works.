@@ -7,6 +7,11 @@ fun main() {
     val listPaymentMethod: List<PaymentMethod> = listOf(wallet, card)
 
     for (payment in listPaymentMethod) {
+        when (payment) {
+            is EWallet -> {
+                wallet.topUp(50000.0)
+            }
+        }
         payment.processPayment(75000.0)
     }
 }
