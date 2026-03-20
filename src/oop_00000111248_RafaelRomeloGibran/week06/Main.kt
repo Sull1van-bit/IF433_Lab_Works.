@@ -9,4 +9,11 @@ fun main() {
     hub.addDevice(lamp)
     hub.addDevice(speaker)
     hub.addDevice(cctv)
+
+    lamp.turnOn()
+    speaker.turnOn()
+    cctv.turnOn()
+
+    hub.activateSecurityMode()
+    hub.turnOffAllSwitches()
 }
