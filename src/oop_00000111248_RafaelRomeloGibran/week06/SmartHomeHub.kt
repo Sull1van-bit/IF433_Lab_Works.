@@ -7,4 +7,25 @@ class SmartHomeHub {
         devices.add(device)
         println("Perangkat [${device.name}] berhasil dihubungkan ke Hub.")
     }
+
+    fun turnOffAllSwitches() {
+        println("\nMematikan semua perangkat")
+        for (device in devices) {
+            if (device is Switchable) {
+                device.turnOff()
+            }
+        }
+    }
+
+    fun activateSecurityMode() {
+        println("\nMode Keamanan Diaktifkan")
+        for (device in devices) {
+            if (device is Recordable) {
+                device.startRecord()
+            }
+            if (device is SmartSpeaker) {
+                device.playMusic("Sirine Peringatan")
+            }
+        }
+    }
 }
