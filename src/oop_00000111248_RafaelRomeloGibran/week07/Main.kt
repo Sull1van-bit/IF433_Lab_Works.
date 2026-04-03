@@ -18,4 +18,7 @@ fun main() {
 
     val starterSword = Weapon.forgeStarterSword()
     println("Senjata Awal: ${starterSword.item.name}, Damage: ${starterSword.item.damage}")
+
+    val upgradedItem = starterSword.item.copy(damage = 25)
+    println("Senjata di-upgrade! Damage baru: ${upgradedItem.damage}")
 }
