@@ -1,5 +1,11 @@
 package oop_00000111248_RafaelRomeloGibran.week07
 
-class Main {
-    val client = NetworkClient("https://api.umn.ac.id")
+fun Main() {
+    println("test singleton")
+    println("Status: ${DatabaseManager.connectionStatus}")
+    DatabaseManager.connect()
+
+    println("Test object")
+    val client = NetworkClient.createClient()
+    client.connect()
 }
