@@ -21,4 +21,9 @@ fun main() {
 
     val upgradedItem = starterSword.item.copy(damage = 25)
     println("Senjata di-upgrade! Damage baru: ${upgradedItem.damage}")
+
+    processEvent(BattleState.SafeZone)
+    processEvent(BattleState.MonsterEncounter("Goblin"))
+    processEvent(BattleState.LootDropped(upgradedItem))
+    processEvent(BattleState.GameOver("Terkena jebakan racun"))
 }
