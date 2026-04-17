@@ -33,8 +33,8 @@ fun main() {
         }
     }
 
-    val someObjects: Any = 100
-
+    val someObjects: Any = 100 //Aslinya Integer
+    
     val safeString = someObjects as? String ?: "Unknown String"
     println("Hasil Cast + Fallback: $safeString")
 }
