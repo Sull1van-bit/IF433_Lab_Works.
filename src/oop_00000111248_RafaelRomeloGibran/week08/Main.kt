@@ -16,4 +16,12 @@ fun main() {
     } ?: "Struk belanja: Harga belum diset"
 
     println(receipt)
+
+    println("=== Test SAFE CASTING ===")
+    val mixedData: List<Any> = listOf(
+        "Smartphone",
+        1500000,
+        UserProfile("Andi", null),
+        4500000.0
+    )
 }
