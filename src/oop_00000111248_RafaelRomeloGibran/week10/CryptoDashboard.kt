@@ -13,4 +13,6 @@ fun main() {
     response.data.forEach { coin ->
         println("Koin: ${coin.name} | Saldo: ${coin.balance}")
     }
+
+    val txRepo = WalletRepository<Transaction>()
 }
