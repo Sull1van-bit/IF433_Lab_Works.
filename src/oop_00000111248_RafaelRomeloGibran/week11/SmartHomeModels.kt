@@ -1,0 +1,8 @@
+package oop_00000111248_RafaelRomeloGibran.week11
+
+data class SmartDevice(
+    var name: String,
+    var category: String,
+    var isOnline: Boolean = false,
+    var powerLoad: Int = 0
+)
