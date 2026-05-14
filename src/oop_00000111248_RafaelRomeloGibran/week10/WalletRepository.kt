@@ -13,5 +13,5 @@ class WalletRepository<T : Any> {
 
     fun find(predicate: (T) -> Boolean): List<T> {
         return items.filter(predicate)
-    }
+    } // CHECKPOINT 14
 }
