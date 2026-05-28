@@ -6,3 +6,5 @@ import java.io.FileNotFoundException
 data class TradeRecord(val id: Int, val symbol: String, val type: String, val margin: Double, val pnl: Double)
 
 fun TradeRecord.toCsv(): String = "$id,$symbol,$type,$margin,$pnl"
+
+fun fromCsvTrade(line: String): TradeRecord?.
